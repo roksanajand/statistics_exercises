@@ -95,3 +95,56 @@ This set focuses on the analysis, visualization, and calculation of statistical 
      - \(P(X=x, Y=y) = P(X=x) \cdot P(Y=y)\).
    - Concluded that \(X\) and \(Y\) are **not independent** (`test = False`).
 
+### cwl4: Exploratory Data Analysis Elements
+
+1. **Selected Plot Types for a Single Parameter:**
+   - Created a figure with 2x2 subplots, showcasing different plot types for the `Alcohol` parameter grouped by grape cultivars:
+     - Boxplot with a custom color and mean marker,
+     - Violinplot with a custom color,
+     - Stripplot with adjusted point size, color, and transparency,
+     - Swarmplot with adjusted point size and color.
+
+2. **Plots for All Parameters by Cultivar:**
+   - **Boxplots for All Parameters:**
+     - Created a 2x3 subplot figure for parameters: `Alcohol`, `Malic acid`, `Ash`, `Flavanoids`, `Color intensity`, and `OD280/OD315`, grouped by grape cultivar with:
+       - A consistent, custom color palette,
+       - Mean markers,
+       - No legends displayed.
+   - **Swarmplots for All Parameters:**
+     - Created a similar 2x3 subplot figure using swarmplots with:
+       - A consistent, custom color palette,
+       - Adjusted point sizes,
+       - No legends displayed.
+
+3. **Descriptive Statistics:**
+   - Computed basic descriptive statistics for all parameters using `pandas.DataFrame.describe()`.
+   - Added skewness and kurtosis for each parameter using `scipy.stats.skew()` and `scipy.stats.kurtosis()`.
+
+4. **Linear Correlation Analysis:**
+   - **Manual Calculation:**
+     - Computed the linear correlation coefficient \( r \) between `OD280/OD315` (X) and `Flavanoids` (Y) using the formula for Pearson’s correlation coefficient.
+   - **Using Functions:**
+     - Computed a correlation matrix for all parameter pairs using `pandas.DataFrame.corr()`.
+   - **Visualization:**
+     - Created a heatmap of the correlation matrix using `seaborn.heatmap()` with:
+       - A custom color scale,
+       - Annotated values.
+   - **Pairplots:**
+     - Prepared pairwise scatterplots with:
+       - Custom color palettes for grape cultivars,
+       - Adjusted marker properties (shape, size, transparency).
+
+5. **Linear Regression:**
+   - **Manual Regression Coefficients:**
+     - Calculated regression coefficients \( a_1 \) and \( b_1 \) for the linear relationship between `Flavanoids` (Y) and `OD280/OD315` (X) using the least squares method.
+   - **Using Functions:**
+     - Obtained regression coefficients \( a_2 \) and \( b_2 \) using `scipy.stats.linregress()`.
+   - **Regression Visualization:**
+     - Created a scatterplot with a regression line:
+       - The line was overlaid using manually calculated coefficients.
+   - **Comprehensive Regression Analysis:**
+     - Generated pairplots for all parameters:
+       - With a regression line for all data,
+       - With separate regression lines for each cultivar,
+       - Adjusted marker properties and color palettes for clarity.
+
