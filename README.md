@@ -148,3 +148,68 @@ This set focuses on the analysis, visualization, and calculation of statistical 
        - With separate regression lines for each cultivar,
        - Adjusted marker properties and color palettes for clarity.
 
+### cwl5: Sampling and Representativeness in Random Samples
+
+1. **Random Sample Scenarios:**
+   - **Scenario 1:**
+     - Selected the first 200 individuals passing through the main gate, sorted by `Czas przejścia przez bramę`.
+     - Ensured that no individual was sampled more than once.
+     - Saved result in `sample_1`.
+   - **Scenario 2:**
+     - Randomly sampled 200 individuals with replacement, simulating a crowd-based survey.
+     - Allowed repeated sampling of individuals.
+     - Saved result in `sample_2`.
+   - **Scenario 3:**
+     - Randomly sampled 200 individuals without replacement from the population, simulating a crowd-based survey where respondents cannot answer more than once.
+     - Saved result in `sample_3`.
+   - **Scenario 4:**
+     - Stratified sampling approach: Selected 40 individuals from each of the 5 sectors (200 in total), ensuring equal representation from each sector.
+     - Ensured no duplicates and saved result in `sample_4`.
+   - **Scenario 5:**
+     - Stratified sampling proportional to the population size of each sector.
+     - Sampled 25% of the population from each sector without replacement.
+     - Saved result in `sample_5`.
+   - **Scenario 6:**
+     - Cluster sampling: Randomly selected 4 buses and included all passengers in those buses in the sample.
+     - Saved result in `sample_6`.
+
+ **Strengths and Weaknesses of Sampling Methods:**
+   - **Scenario 1:**
+     - Strengths: Efficient and straightforward implementation.
+     - Weaknesses: May not represent the diversity of the entire population.
+   - **Scenario 2:**
+     - Strengths: Simple and quick.
+     - Weaknesses: Repeated individuals reduce sample diversity.
+   - **Scenario 3:**
+     - Strengths: Ensures diverse sampling by avoiding duplicates.
+     - Weaknesses: Randomization may still miss certain population segments.
+   - **Scenario 4:**
+     - Strengths: Equal representation from all sectors ensures balance.
+     - Weaknesses: Potentially labor-intensive in execution.
+   - **Scenario 5:**
+     - Strengths: Proportional representation ensures sample mirrors population structure.
+     - Weaknesses: Implementation complexity increases with population stratification.
+   - **Scenario 6:**
+     - Strengths: Captures all individuals within randomly selected clusters.
+     - Weaknesses: May exclude other clusters, reducing overall diversity.
+
+ 2. **Part 1: Representativeness Analysis**
+   - Evaluated the representativeness of four provided random samples drawn from a population with \( N(172, 7) \).
+   - Observations:
+     - Sample 1 had a positively skewed distribution and lower variance than the population.
+     - Sample 2 was less dispersed, with multiple peaks, showing reduced concentration around the mean.
+     - Sample 3 closely mirrored the population's parameters, being the most representative.
+     - Sample 4 exhibited the highest variance, with extreme outliers causing positive skewness.
+
+3. **Part 2: Representativeness Analysis**
+   - Evaluated 5000 samples (size 100 each) drawn from a population with \( N(172, 7) \), analyzing:
+     - **Mean Distribution:**
+       - Symmetrical around the population mean, suggesting high representativeness.
+     - **Variance Distribution:**
+       - Slightly asymmetric with values skewed, indicating occasional samples with outliers.
+     - **Standard Deviation Distribution:**
+       - Symmetrical and concentrated around the population's standard deviation (\( 7 \)).
+   - **Conclusions:**
+     - Representativeness depends on how well samples capture the population's diversity.
+     - Larger sample sizes reduce variability, enhancing representativeness and analysis accuracy.
+
