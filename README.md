@@ -31,3 +31,37 @@ This repository contains exercises in statistics completed during my second year
      - \( P(1 < Y <= 6) \),
      - \( P(Z <= 12 \,|\, Z > 21) \).
 
+### cwl2: Continuous Random Variable Distributions
+
+1. **Uniform Distribution (X):**
+   - Constructed the **Probability Density Function (PDF)** and **Cumulative Distribution Function (CDF)** for \(X\) with values ranging from -2 to 2.
+   - Visualized the PDF and CDF of \(X\) using plots.
+   - Calculated statistical parameters for \(X\):
+     - Mean (\(r1\_mean\)),
+     - Variance (\(r1\_var\)),
+     - Standard Deviation (\(r1\_std\)).
+
+2. **Normal Distribution (Y):**
+   - Generated the PDF and CDF for a normal random variable \(Y\) with given mean and standard deviation.
+   - Visualized the normal distribution's PDF and CDF using plots.
+   - Computed statistical parameters for \(Y\):
+     - Mean (\(r2\_mean\)),
+     - Variance (\(r2\_var\)),
+     - Standard Deviation (\(r2\_std\)).
+
+3. **Gamma Distribution (Z):**
+   - Created the PDF and CDF for a gamma random variable \(Z\) based on specified shape and scale parameters.
+   - Visualized the gamma distribution's PDF and CDF using plots.
+   - Calculated statistical parameters for \(Z\):
+     - Mean (\(r3\_mean\)),
+     - Variance (\(r3\_var\)),
+     - Standard Deviation (\(r3\_std\)).
+
+4. **Probability Calculations and Visualizations:**
+   - Calculated and visualized specific probabilities for events:
+     - \( P(X > -0.5) \),
+     - \( P(1 < Y < 8) \),
+     - \( P(Z < 2 \,|\, Z > 12) \).
+
+This set focuses on the analysis, visualization, and calculation of statistical properties for continuous random variables.
+
