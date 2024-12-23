@@ -65,3 +65,33 @@ This repository contains exercises in statistics completed during my second year
 
 This set focuses on the analysis, visualization, and calculation of statistical properties for continuous random variables.
 
+### cwl3: Multivariate Random Variable Distributions
+
+1. **Marginal Distributions:**
+   - Computed marginal probability distributions:
+     - \(P(X=x)\) stored in `r1bx`.
+     - \(P(Y=y)\) stored in `r1by`.
+
+2. **Conditional Distributions:**
+   - Calculated conditional distributions:
+     - \(P(X=x \,|\, Y=5)\) stored in `r1wx`.
+     - \(P(Y=y \,|\, X=2)\) stored in `r1wy`.
+
+3. **Statistical Parameters of the Joint Distribution:**
+   - Computed the following parameters:
+     - Mean (\(r1\_mean\)),
+     - Variance (\(r1\_var\)),
+     - Standard Deviation (\(r1\_std\)),
+     - Covariance (\(r1\_cov\)),
+     - Correlation Coefficient (\(r1\_r\)).
+
+4. **Probability Calculations:**
+   - Calculated and visualized specific joint probabilities:
+     - \(P(X > 2, 0 < Y \leq 10)\) stored in `p1`.
+     - \(P(X \leq 2 \,|\, X > 3, Y \geq 5)\) stored in `p2`.
+
+5. **Independence Test:**
+   - Verified the independence of \(X\) and \(Y\) using the formula:
+     - \(P(X=x, Y=y) = P(X=x) \cdot P(Y=y)\).
+   - Concluded that \(X\) and \(Y\) are **not independent** (`test = False`).
+
