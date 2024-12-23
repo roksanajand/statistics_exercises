@@ -28,6 +28,6 @@ This repository contains exercises in statistics completed during my second year
 7. **Probability Calculations:**
    - Computed and visualized probabilities for specific events:
      - \( P(X > 5) \),
-     - \( P(1 < Y \leq 6) \),
-     - \( P(Z \leq 12 \,|\, Z > 21) \).
+     - \( P(1 < Y <= 6) \),
+     - \( P(Z <= 12 \,|\, Z > 21) \).
 
