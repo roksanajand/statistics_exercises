@@ -396,4 +396,42 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Displays the probability density function (PDF) of the test statistic's theoretical distribution.
      - Highlights critical regions and indicates the test statistic value.
 
+### cwl10: Hypothesis Testing - Non-Parametric Tests
+
+1. **Chi-Square Test for Homogeneity:**
+   - Prepared data for a Chi-Square test using `chi2_NHST()`:
+     - Theoretical probabilities for the number of heads in 20 coin tosses were computed using `scipy.stats.binom.pmf()`.
+     - Observed counts were calculated using `np.bincount()`.
+   - Outputs include:
+     - Test statistic (\(\chi^2\)),
+     - Critical value (\(\chi^2_\alpha\)),
+     - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+2. **Normality Tests:**
+   - a) **Shapiro-Wilk Test for Normality:**
+     - Used `scipy.stats.shapiro()` to test if the bill depth of Gentoo penguins follows a normal distribution.
+     - Results:
+       - \(p\)-value stored in `pvalue_1`.
+       - Test result (\(H_1\)): 1 if \(H_0\) is rejected, 0 otherwise.
+   - b) **Kolmogorov-Smirnov Test for Normality:**
+     - Tested if the flipper length of Adelie penguins follows a normal distribution with a mean of 190 and a standard deviation of 6 using `scipy.stats.kstest()`.
+     - Results:
+       - \(p\)-value stored in `pvalue_2`.
+       - Test result (\(H_2\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+-c) **Chi-Square Goodness-of-Fit Test:**
+   - Used `scipy.stats.chisquare()` to test if the flipper lengths of Adelie penguins follow a normal distribution with a mean of 190 and a standard deviation of 6:
+     - Binned observed values using `np.histogram()`.
+     - Calculated expected frequencies using `scipy.stats.norm.cdf()`.
+   - Results:
+       - \(p\)-value stored in `pvalue_3`.
+       - Test result (\(H_3\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+- d) **Two-Sample Kolmogorov-Smirnov Test:**
+   - Used `scipy.stats.ks_2samp()` to test if the flipper length distributions of Adelie and Chinstrap penguins are identical:
+     - Compared the empirical distribution functions of the two samples.
+   - Results:
+       - \(p\)-value stored in `pvalue_4`.
+       - Test result (\(H_4\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
 
