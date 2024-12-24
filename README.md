@@ -1,5 +1,13 @@
 # Statistics exercises
 This repository contains exercises in statistics completed during my second year of studies. The tasks cover fundamental and advanced topics in probability theory, random variables, and statistical analysis. Each folder represents a set of problems focused on specific theoretical concepts and their practical applications.
+
+
+This repository contains exercises in statistics completed during my second year of studies. The tasks cover fundamental and advanced topics in probability theory, random variables, and statistical analysis. Each folder represents a set of problems focused on specific theoretical concepts and their practical applications.
+
+The exercises range from understanding basic probability distributions and hypothesis testing to advanced techniques such as bootstrapping, permutation tests, and analysis of variance (ANOVA). Alongside custom implementations of statistical methods, the notebooks include visualizations to aid comprehension and demonstrate results effectively. These exercises emphasize both theoretical rigor and hands-on application, providing a strong foundation for tackling real-world data analysis problems.
+
+Whether it's calculating confidence intervals using bootstrap methods, testing hypotheses with parametric and non-parametric techniques, or analyzing variance across multiple groups, this repository serves as a comprehensive learning resource for mastering statistical methods.
+
 ### cwl1: Discrete Random Variable Distributions
 
 1. **Probability Mass Function (PMF):**
