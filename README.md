@@ -432,3 +432,41 @@ This set of tasks demonstrates parametric estimation techniques for population m
        - \(p\)-value stored in `pvalue_4`.
        - Test result (\(H_4\)): 1 if \(H_0\) is rejected, 0 otherwise.
 
+### cwl11: Hypothesis Testing - Bootstrap and Permutation Tests
+
+1. **Bootstrap Test for Mean:**
+   - Implemented `bootstrap_mean_NHST()` to test the hypothesis about the mean of a population using the bootstrap method:
+     - Generated bootstrap samples by resampling with replacement.
+     - Computed \(p\)-value based on the bootstrap distribution.
+     - Results include:
+       - \(p\)-value,
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+2. **Bootstrap Test for Two Means:**
+   - Implemented `bootstrap_means_NHST()` to test the hypothesis about the means of two populations using the bootstrap method:
+     - Created a combined bootstrap population.
+     - Generated bootstrap samples for both groups and computed differences in means.
+     - Results include:
+       - \(p\)-value,
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+3. **Permutation Test for Two Means:**
+   - Implemented `permutation_means_NHST()` to test the hypothesis about the means of two populations using a permutation test:
+     - Mixed both samples and permuted the data.
+     - Calculated differences in means for each permutation.
+     - Results include:
+       - \(p\)-value,
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+4. **Permutation Test Using Dedicated Function:**
+   - a) **Test for Mean Differences:**
+     - Used `scipy.stats.permutation_test()` to test if the means of two populations are different.
+     - Results:
+       - \(p\)-value stored in `pvalue_1`,
+       - Test result (\(H_1\)): 1 if \(H_0\) is rejected, 0 otherwise.
+   - b) **Test for Variance Differences:**
+     - Used `scipy.stats.permutation_test()` to test if the variance of one population is greater than the other.
+     - Results:
+       - \(p\)-value stored in `pvalue_2`,
+       - Test result (\(H_2\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
