@@ -418,20 +418,17 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Results:
        - \(p\)-value stored in `pvalue_2`.
        - Test result (\(H_2\)): 1 if \(H_0\) is rejected, 0 otherwise.
-
--c) **Chi-Square Goodness-of-Fit Test:**
-   - Used `scipy.stats.chisquare()` to test if the flipper lengths of Adelie penguins follow a normal distribution with a mean of 190 and a standard deviation of 6:
-     - Binned observed values using `np.histogram()`.
-     - Calculated expected frequencies using `scipy.stats.norm.cdf()`.
-   - Results:
+   - c) **Chi-Square Goodness-of-Fit Test:**
+     - Used `scipy.stats.chisquare()` to test if the flipper lengths of Adelie penguins follow a normal distribution with a mean of 190 and a standard deviation of 6:
+       - Binned observed values using `np.histogram()`.
+       - Calculated expected frequencies using `scipy.stats.norm.cdf()`.
+     - Results:
        - \(p\)-value stored in `pvalue_3`.
        - Test result (\(H_3\)): 1 if \(H_0\) is rejected, 0 otherwise.
-
-- d) **Two-Sample Kolmogorov-Smirnov Test:**
-   - Used `scipy.stats.ks_2samp()` to test if the flipper length distributions of Adelie and Chinstrap penguins are identical:
-     - Compared the empirical distribution functions of the two samples.
-   - Results:
+   - d) **Two-Sample Kolmogorov-Smirnov Test:**
+     - Used `scipy.stats.ks_2samp()` to test if the flipper length distributions of Adelie and Chinstrap penguins are identical:
+       - Compared the empirical distribution functions of the two samples.
+     - Results:
        - \(p\)-value stored in `pvalue_4`.
        - Test result (\(H_4\)): 1 if \(H_0\) is rejected, 0 otherwise.
-
 
