@@ -230,9 +230,9 @@ This set focuses on the analysis, visualization, and calculation of statistical 
      - Returns the lower (`X`) and upper (`Y`) bounds.
    - **Examples:**
      - With population std = 0.2:
-      - \( &#956 \in [4.9056, 5.0527] \) for \( 1-\alpha = 0.9 \)
+      - \(𝜇 \in [4.9056, 5.0527] \) for \( 1-alpha = 0.9 \)
      - Without population std:
-       - \( \mu \in [4.9134, 5.0450] \) for \( 1-\alpha = 0.9 \)
+       - \( 𝜇 \in [4.9134, 5.0450] \) for \( 1-alpha = 0.9 \)
 
 2. **Interval Estimation of Variance:**
    - **Function:** `variance_estimation(data, alpha, population_mean="unknown")`
