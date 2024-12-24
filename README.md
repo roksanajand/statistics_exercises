@@ -355,7 +355,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Supports three types of alternative hypotheses: two-sided, less, and greater.
      - Outputs include:
        - Test statistic (\(t\)),
-       - Critical value (\(t_\alpha\)),
+       - Critical value (\(t_alpha\)),
        - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
 
 2. **Testing Hypothesis About Variance:**
@@ -363,7 +363,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Supports three types of alternative hypotheses: two-sided, less, and greater.
      - Outputs include:
        - Test statistic (\(\chi^2\)),
-       - Critical values (\(\chi^2_\alpha\)),
+       - Critical values (\(\chi^2_alpha\)),
        - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
 
 3. **Testing Hypothesis About Proportions:**
@@ -371,7 +371,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Supports three types of alternative hypotheses: two-sided, less, and greater.
      - Outputs include:
        - Test statistic (\(u\)),
-       - Critical value (\(u_\alpha\)),
+       - Critical value (\(u_alpha\)),
        - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
 
 4. **Hypothesis Testing Using Dedicated Functions:**
