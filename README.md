@@ -309,7 +309,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
        - Small bandwidths result in overfitting (too many peaks).
        - Large bandwidths overly smooth the data, losing finer details.
 
-4. **CDF Estimation:**
+4 . **CDF Estimation:**
    - Implemented cumulative distribution function (CDF) estimation:
      - Calculated empirical CDF from the sorted dataset.
      - Computed confidence intervals based on the Kolmogorov-Smirnov distribution.
