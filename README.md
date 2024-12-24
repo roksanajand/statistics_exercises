@@ -348,3 +348,52 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Automatically calculated confidence intervals for each parameter at a significance level of 1-α = 0.98.
      - Values stored in variables `mean_ci`, `var_ci`, `std_ci`, `r_ci`, `a_ci`, and `b_ci`.
 
+### cwl9: Hypothesis Testing - Parametric Tests
+
+1. **Testing Hypothesis About the Mean:**
+   - Created the `mean_NHST()` function to test hypotheses about the mean of a sample:
+     - Supports three types of alternative hypotheses: two-sided, less, and greater.
+     - Outputs include:
+       - Test statistic (\(t\)),
+       - Critical value (\(t_\alpha\)),
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+2. **Testing Hypothesis About Variance:**
+   - Developed the `variance_NHST()` function to test hypotheses about sample variance:
+     - Supports three types of alternative hypotheses: two-sided, less, and greater.
+     - Outputs include:
+       - Test statistic (\(\chi^2\)),
+       - Critical values (\(\chi^2_\alpha\)),
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+3. **Testing Hypothesis About Proportions:**
+   - Prepared the `proportion_NHST()` function to test hypotheses about proportions in binary samples:
+     - Supports three types of alternative hypotheses: two-sided, less, and greater.
+     - Outputs include:
+       - Test statistic (\(u\)),
+       - Critical value (\(u_\alpha\)),
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+
+4. **Hypothesis Testing Using Dedicated Functions:**
+   - a) **Coin Toss Test:**
+     - Used `scipy.stats.binomtest()` to test if a coin is fair.
+     - Results:
+       - \(p\)-value stored in `pvalue_1`.
+       - Test result (\(H_1\)): 1 if \(H_0\) (coin is fair) is rejected, 0 otherwise.
+   - b) **Single Sample Mean Test:**
+     - Tested if the mean weight of products from the first production line equals 0.5kg using `scipy.stats.ttest_1samp()` with a one-sided alternative hypothesis.
+     - Results:
+       - \(p\)-value stored in `pvalue_2`.
+       - Test result (\(H_2\)): 1 if \(H_0\) (mean equals 0.5kg) is rejected, 0 otherwise.
+   - c) **Paired Samples Test:**
+     - Used `scipy.stats.ttest_rel()` to test if the mean weight from the second production line is higher than the first.
+     - Results:
+       - \(p\)-value stored in `pvalue_3`.
+       - Test result (\(H_3\)): 1 if \(H_0\) (means are equal) is rejected, 0 otherwise.
+
+ **Visualization:**
+   - All functions provide visualizations using the `vizualize_test_result()` helper function:
+     - Displays the probability density function (PDF) of the test statistic's theoretical distribution.
+     - Highlights critical regions and indicates the test statistic value.
+
+
