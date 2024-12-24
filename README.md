@@ -477,7 +477,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Computed the F-statistic and compared it with the critical F-value.
      - Results include:
        - \(F\)-statistic,
-       - \(F_\alpha\) critical value,
+       - \(F_alpha\) critical value,
        - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
      - Visualization included the probability density function of the F-distribution with rejection regions highlighted.
 
@@ -486,7 +486,7 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Computed the Tukey's HSD statistic for each pair.
      - Results include:
        - HSD statistic matrix,
-       - \(HSD_\alpha\) critical value,
+       - \(HSD_alpha\) critical value,
        - Decision matrix (H): 1 if \(H_0\) is rejected for a pair, 0 otherwise.
      - Visualization displayed a heatmap of results with a color scale centered on \(HSD_\alpha\).
 
