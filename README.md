@@ -470,3 +470,35 @@ This set of tasks demonstrates parametric estimation techniques for population m
        - \(p\)-value stored in `pvalue_2`,
        - Test result (\(H_2\)): 1 if \(H_0\) is rejected, 0 otherwise.
 
+### cwl12: Analysis of Variance (ANOVA)
+
+1. **One-Way ANOVA:**
+   - Implemented `one_way_anova()` to test the hypothesis about the equality of means across multiple groups:
+     - Computed the F-statistic and compared it with the critical F-value.
+     - Results include:
+       - \(F\)-statistic,
+       - \(F_\alpha\) critical value,
+       - Test result (\(H\)): 1 if \(H_0\) is rejected, 0 otherwise.
+     - Visualization included the probability density function of the F-distribution with rejection regions highlighted.
+
+2. **Tukey's HSD Test:**
+   - Implemented `tukey_HSD_test()` to compare all pairs of groups for mean differences:
+     - Computed the Tukey's HSD statistic for each pair.
+     - Results include:
+       - HSD statistic matrix,
+       - \(HSD_\alpha\) critical value,
+       - Decision matrix (H): 1 if \(H_0\) is rejected for a pair, 0 otherwise.
+     - Visualization displayed a heatmap of results with a color scale centered on \(HSD_\alpha\).
+
+3. **Using Dedicated Functions:**
+   - a) One-Way ANOVA Using `scipy.stats.f_oneway()`:
+     - Tested the equality of means across groups in `test_data_2`.
+     - Results:
+       - \(p\)-value stored in `pvalue_1`,
+       - Test result (H_1): 1 if \(H_0\) is rejected, 0 otherwise.
+   - b) Tukey's HSD Using `scipy.stats.tukey_hsd()`:
+     - Tested pairwise differences in means across groups in `test_data_2`.
+     - Results:
+       - Matrix of p-values stored in `pvalue_2`,
+       - Decision matrix (H_2): 1 if \(H_0\) is rejected for a pair, 0 otherwise.
+
