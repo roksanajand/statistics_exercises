@@ -280,11 +280,38 @@ This set focuses on the analysis, visualization, and calculation of statistical 
        a należy do przedziału [X1, X2] przy założeniu poziomu ufności 1-α = Z1
        b należy do przedziału [X2, Y2] przy założeniu poziomu ufności 1-α = Z2
        ```
-     - Returns tuples: \((a_{\text{low}}, a_{\text{high}})\) and \((b_{\text{low}}, b_{\text{high}})\).
+     
    - **Examples:**
      - \( a in [1.9033, 2.0245] \), \( b in [-5.331, -4.7958] \) for \( 1-α = 0.9 \)
      - \( a in [1.8916, 2.0361] \), \( b in [-5.3827, -4.7442] \) for \( 1-α = 0.95 \)
 
 ### Conclusions:
 This set of tasks demonstrates parametric estimation techniques for population mean, variance, Pearson correlation, and regression coefficients. Confidence intervals provide a measure of uncertainty, allowing us to quantify the reliability of our estimates under specified confidence levels.
+
+### cwl7: Nonparametric Estimation
+
+1. **Histogram Visualization:**
+   - Created histograms of the sample dataset using various binning strategies:
+     - Default binning based on the dataset.
+     - Fixed number of bins (e.g., 20 bins).
+     - Fixed bin width (e.g., 0.3).
+     - Custom bin edges with defined steps (e.g., 0.05, 0.15, 0.4).
+   - Added a visual representation of the dataset using markers below the histogram.
+   - Demonstrated the effect of different binning strategies on histogram shape.
+
+2. **Kernel Density Estimation (KDE):**
+   - **Custom Implementation:**
+     - Built a KDE function from scratch using Gaussian kernels.
+     - Generated smooth probability density functions by aggregating kernel contributions.
+   - **scikit-learn Implementation:**
+     - Utilized the `KernelDensity` class with multiple kernel types (e.g., Gaussian, Epanechnikov, Tophat).
+     - Explored the effect of kernel bandwidth on density estimation:
+       - Small bandwidths result in overfitting (too many peaks).
+       - Large bandwidths overly smooth the data, losing finer details.
+
+4. **CDF Estimation:**
+   - Implemented cumulative distribution function (CDF) estimation:
+     - Calculated empirical CDF from the sorted dataset.
+     - Computed confidence intervals based on the Kolmogorov-Smirnov distribution.
+   - Visualized the CDF along with confidence intervals for specified significance levels (e.g., 0.05, 0.02).
 
