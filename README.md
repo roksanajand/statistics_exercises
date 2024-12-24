@@ -1,12 +1,15 @@
 # Statistics exercises
-This repository contains exercises in statistics completed during my second year of studies. The tasks cover fundamental and advanced topics in probability theory, random variables, and statistical analysis. Each folder represents a set of problems focused on specific theoretical concepts and their practical applications.
+This repository contains a series od 12 notebooks completed during my second year of studies. It is designed to explore various statistical concepts, hypothesis testing methods, and data analysis techniques. Each notebook focuses on a specific topic, providing theoretical background, practical implementation, and visualizations to enhance understanding.
+The tasks include:
 
+1. Exploring probability distributions and descriptive statistics.
+2. Conducting statistical hypothesis testing using parametric, non-parametric, bootstrap, and permutation methods.
+3. Performing variance analysis and post-hoc tests such as Tukey's HSD.
+4. Implementing and analyzing real-world data with custom and library-based statistical functions.
+5. Visualizing results with detailed graphs and heatmaps for deeper insights.
 
-This repository contains exercises in statistics completed during my second year of studies. The tasks cover fundamental and advanced topics in probability theory, random variables, and statistical analysis. Each folder represents a set of problems focused on specific theoretical concepts and their practical applications.
+These notebooks serve as a comprehensive guide for understanding and applying statistical methods to real-world problems, emphasizing both manual implementations and the use of Python libraries like `scipy`, `numpy`, `pandas`, and `matplotlib`. Each notebook builds upon the previous concepts, offering a structured approach to learning statistics and data analysis.
 
-The exercises range from understanding basic probability distributions and hypothesis testing to advanced techniques such as bootstrapping, permutation tests, and analysis of variance (ANOVA). Alongside custom implementations of statistical methods, the notebooks include visualizations to aid comprehension and demonstrate results effectively. These exercises emphasize both theoretical rigor and hands-on application, providing a strong foundation for tackling real-world data analysis problems.
-
-Whether it's calculating confidence intervals using bootstrap methods, testing hypotheses with parametric and non-parametric techniques, or analyzing variance across multiple groups, this repository serves as a comprehensive learning resource for mastering statistical methods.
 
 ### cwl1: Discrete Random Variable Distributions
 
