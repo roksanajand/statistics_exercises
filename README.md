@@ -315,3 +315,36 @@ This set of tasks demonstrates parametric estimation techniques for population m
      - Computed confidence intervals based on the Kolmogorov-Smirnov distribution.
    - Visualized the CDF along with confidence intervals for specified significance levels (e.g., 0.05, 0.02).
 
+### cwl8: Bootstrap Estimation
+
+1. **Bootstrap Estimation of Sample Parameters:**
+   - Developed the `bootstrap_parameter_estimation()` function to estimate confidence intervals for sample parameters using the bootstrap method:
+     - Mean (`mean`),
+     - Variance (`var`),
+     - Standard deviation (`std`).
+   - Results include:
+     - Confidence intervals calculated based on the specified number of bootstrap samples and significance levels.
+     - Printed output format: `P belongs to [X, Y] at confidence level 1-α = Z`.
+
+2. **Bootstrap Estimation of Pearson Correlation Coefficient:**
+   - Created the `bootstrap_correlation_estimation()` function to estimate confidence intervals for the Pearson correlation coefficient (`r`) using bootstrap resampling.
+   - Results include:
+     - Confidence intervals for the correlation coefficient based on specified parameters.
+     - Printed output format: `r belongs to [X, Y] at confidence level 1-α = Z`.
+
+3. **Bootstrap Estimation of Linear Regression Coefficients:**
+   - Developed the `bootstrap_linear_regression_coefficients_estimation()` function to estimate confidence intervals for:
+     - Slope (`a`),
+     - Intercept (`b`).
+   - Results include:
+     - Confidence intervals for regression coefficients calculated using bootstrap resampling.
+     - Printed output format: `a belongs to [X1, Y1] at confidence level 1-α = Z1` and `b belongs to [X2, Y2] at confidence level 1-α = Z2`.
+
+4. **Bootstrap Estimation Using `scipy.stats.bootstrap()`:**
+   - Used `scipy.stats.bootstrap()` to estimate confidence intervals for various sample parameters:
+     - Mean, variance, and standard deviation of `sample_1`.
+     - Pearson correlation coefficient, slope, and intercept for `sample_2`.
+   - Results include:
+     - Automatically calculated confidence intervals for each parameter at a significance level of 1-α = 0.98.
+     - Values stored in variables `mean_ci`, `var_ci`, `std_ci`, `r_ci`, `a_ci`, and `b_ci`.
+
