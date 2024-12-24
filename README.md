@@ -230,9 +230,9 @@ This set focuses on the analysis, visualization, and calculation of statistical 
      - Returns the lower (`X`) and upper (`Y`) bounds.
    - **Examples:**
      - With population std = 0.2:
-      - \(𝜇 \in [4.9056, 5.0527] \) for \( 1-alpha = 0.9 \)
+       - \(𝜇 in [4.9056, 5.0527] \) for \( 1-α = 0.9 \)
      - Without population std:
-       - \( 𝜇 \in [4.9134, 5.0450] \) for \( 1-alpha = 0.9 \)
+       - \( 𝜇 in [4.9134, 5.0450] \) for \( 1-α = 0.9 \)
 
 2. **Interval Estimation of Variance:**
    - **Function:** `variance_estimation(data, alpha, population_mean="unknown")`
@@ -248,9 +248,9 @@ This set focuses on the analysis, visualization, and calculation of statistical 
      - Returns the lower (`X`) and upper (`Y`) bounds.
    - **Examples:**
      - With population mean = 5:
-       - \( \sigma^2 \in [0.0186, 0.0553] \) for \( 1-\alpha = 0.9 \)
+       - \( 𝜎^2 in [0.0186, 0.0553] \) for \( 1-α = 0.9 \)
      - Without population mean:
-       - \( \sigma^2 \in [0.0183, 0.0544] \) for \( 1-\alpha = 0.9 \)
+       - \( 𝜎^2 in [0.0183, 0.0544] \) for \( 1-α = 0.9 \)
 
 3. **Confidence Interval for Pearson's Correlation Coefficient:**
    - **Function:** `correlation_estimation(data, alpha)`
@@ -265,8 +265,8 @@ This set focuses on the analysis, visualization, and calculation of statistical 
        ```
      - Returns the lower (`X`) and upper (`Y`) bounds.
    - **Examples:**
-     - \( r \in [0.9495, 0.9692] \) for \( 1-\alpha = 0.95 \)
-     - \( r \in [0.9476, 0.9711] \) for \( 1-\alpha = 0.98 \)
+     - \( r in [0.9495, 0.9692] \) for \( 1-α = 0.95 \)
+     - \( r in [0.9476, 0.9711] \) for \( 1-α = 0.98 \)
 
 4. **Confidence Interval for Linear Regression Coefficients:**
    - **Function:** `linear_regression_coefficients_estimation(data, alpha)`
@@ -282,8 +282,8 @@ This set focuses on the analysis, visualization, and calculation of statistical 
        ```
      - Returns tuples: \((a_{\text{low}}, a_{\text{high}})\) and \((b_{\text{low}}, b_{\text{high}})\).
    - **Examples:**
-     - \( a \in [1.9033, 2.0245] \), \( b \in [-5.331, -4.7958] \) for \( 1-\alpha = 0.9 \)
-     - \( a \in [1.8916, 2.0361] \), \( b \in [-5.3827, -4.7442] \) for \( 1-\alpha = 0.95 \)
+     - \( a in [1.9033, 2.0245] \), \( b in [-5.331, -4.7958] \) for \( 1-α = 0.9 \)
+     - \( a in [1.8916, 2.0361] \), \( b in [-5.3827, -4.7442] \) for \( 1-α = 0.95 \)
 
 ### Conclusions:
 This set of tasks demonstrates parametric estimation techniques for population mean, variance, Pearson correlation, and regression coefficients. Confidence intervals provide a measure of uncertainty, allowing us to quantify the reliability of our estimates under specified confidence levels.
