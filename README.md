@@ -213,3 +213,78 @@ This set focuses on the analysis, visualization, and calculation of statistical 
      - Representativeness depends on how well samples capture the population's diversity.
      - Larger sample sizes reduce variability, enhancing representativeness and analysis accuracy.
 
+### cwl6: Parametric Estimation
+
+1. **Point Estimation of the Mean:**
+   - **Function:** `mean_estimation(data, alpha, population_std="unknown")`
+   - **Purpose:** Computes the confidence interval for the population mean based on sample data.
+   - **Key Steps:**
+     - If the population standard deviation is known, use the normal distribution.
+     - If the population standard deviation is unknown, use the t-distribution.
+     - Compute the margin of error and calculate the confidence interval bounds.
+   - **Output Format:**
+     - Prints: 
+       ```
+       μ należy do przedziału [X, Y] przy założeniu poziomu ufności 1-α = Z
+       ```
+     - Returns the lower (`X`) and upper (`Y`) bounds.
+   - **Examples:**
+     - With population std = 0.2:
+       - \( \mu \in [4.9056, 5.0527] \) for \( 1-\alpha = 0.9 \)
+     - Without population std:
+       - \( \mu \in [4.9134, 5.0450] \) for \( 1-\alpha = 0.9 \)
+
+2. **Interval Estimation of Variance:**
+   - **Function:** `variance_estimation(data, alpha, population_mean="unknown")`
+   - **Purpose:** Computes the confidence interval for the population variance.
+   - **Key Steps:**
+     - If the population mean is unknown, calculate it from the sample.
+     - Use the chi-square distribution to determine the confidence interval bounds.
+   - **Output Format:**
+     - Prints:
+       ```
+       𝜎^2  należy do przedziału [X, Y] przy założeniu poziomu ufności 1-α = Z
+       ```
+     - Returns the lower (`X`) and upper (`Y`) bounds.
+   - **Examples:**
+     - With population mean = 5:
+       - \( \sigma^2 \in [0.0186, 0.0553] \) for \( 1-\alpha = 0.9 \)
+     - Without population mean:
+       - \( \sigma^2 \in [0.0183, 0.0544] \) for \( 1-\alpha = 0.9 \)
+
+3. **Confidence Interval for Pearson's Correlation Coefficient:**
+   - **Function:** `correlation_estimation(data, alpha)`
+   - **Purpose:** Computes the confidence interval for the Pearson correlation coefficient.
+   - **Key Steps:**
+     - Calculate the sample Pearson correlation coefficient.
+     - Use the Fisher z-transformation to compute confidence interval bounds.
+   - **Output Format:**
+     - Prints:
+       ```
+       r należy do przedziału [X, Y] przy założeniu poziomu ufności 1-α = Z
+       ```
+     - Returns the lower (`X`) and upper (`Y`) bounds.
+   - **Examples:**
+     - \( r \in [0.9495, 0.9692] \) for \( 1-\alpha = 0.95 \)
+     - \( r \in [0.9476, 0.9711] \) for \( 1-\alpha = 0.98 \)
+
+4. **Confidence Interval for Linear Regression Coefficients:**
+   - **Function:** `linear_regression_coefficients_estimation(data, alpha)`
+   - **Purpose:** Computes the confidence intervals for the slope (\( a \)) and intercept (\( b \)) of a linear regression equation.
+   - **Key Steps:**
+     - Calculate \( a \) (slope) and \( b \) (intercept) using the method of least squares.
+     - Use the t-distribution to determine confidence intervals for \( a \) and \( b \).
+   - **Output Format:**
+     - Prints:
+       ```
+       a należy do przedziału [X1, X2] przy założeniu poziomu ufności 1-α = Z1
+       b należy do przedziału [X2, Y2] przy założeniu poziomu ufności 1-α = Z2
+       ```
+     - Returns tuples: \((a_{\text{low}}, a_{\text{high}})\) and \((b_{\text{low}}, b_{\text{high}})\).
+   - **Examples:**
+     - \( a \in [1.9033, 2.0245] \), \( b \in [-5.331, -4.7958] \) for \( 1-\alpha = 0.9 \)
+     - \( a \in [1.8916, 2.0361] \), \( b \in [-5.3827, -4.7442] \) for \( 1-\alpha = 0.95 \)
+
+### Conclusions:
+This set of tasks demonstrates parametric estimation techniques for population mean, variance, Pearson correlation, and regression coefficients. Confidence intervals provide a measure of uncertainty, allowing us to quantify the reliability of our estimates under specified confidence levels.
+
